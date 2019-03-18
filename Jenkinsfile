@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage ('back up') {
             steps {
+                sh echo "hello"
                 
             }
         }
