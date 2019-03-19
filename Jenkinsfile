@@ -22,7 +22,7 @@ pipeline {
                 do
                 config=\$(echo \$x | cut -c \$leng-)
                 cp -rf --parents \$config  $WORKSPACE/backups/
-                #cp -rf --parents $JENKINS_HOME/jobs/\$config  $JENKINS_HOME/workspace/qwerty
+                #cp -rf --parents $JENKINS_HOME/jobs\$config  $JENKINS_HOME/workspace/qwerty
                 done
                 """
             }
