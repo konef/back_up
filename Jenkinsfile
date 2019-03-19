@@ -9,7 +9,7 @@ pipeline {
         stage ('back up') {
             steps {
                 sh """
-                file=${find /var/lib/jenkins/jobs/ -name config.xml}
+                file=\$(find /var/lib/jenkins/jobs/ -name config.xml)
                 echo \$file
                 """
             }
