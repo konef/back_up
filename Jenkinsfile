@@ -22,7 +22,7 @@ pipeline {
                 config=\$(echo \$x | cut -c 23-)
                 cd /var/lib/jenkins/jobs
                 #cp -rf --parents \$config  $WORKSPACE/backups/
-                cp -rf --parents \$config  $WORKSPACE/workspace/qwerty
+                cp -rf --parents \$config  $JENKINS_HOME/workspace/qwerty
                 done
                 """
             }
