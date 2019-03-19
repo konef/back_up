@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh """
                 git clone git@github.com:konef/backups.git
-                for x in \$(find $JENKINS_HOME -name config.xml)
+                for x in \$(find $JENKINS_HOME/jobs/ -name config.xml)
                 do
                 config=\$(echo \$x | cut -c 23-)
                 cd /var/lib/jenkins/jobs
