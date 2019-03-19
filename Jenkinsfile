@@ -14,7 +14,7 @@ pipeline {
                 do
                 config=\$(echo \$x | cut -c 23-)
                 cd /var/lib/jenkins/jobs
-                cp --parents \$config  backups/
+                cp -rf --parents \$config  backups/
                 done
                 """
             }
