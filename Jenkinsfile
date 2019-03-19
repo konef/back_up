@@ -9,10 +9,8 @@ pipeline {
         stage ('back up') {
             steps {
                 sh """
-                for x in ${find /var/lib/jenkins/jobs/ -name config.xml}
-                do
-                echo ${x}
-                done
+                file=${find /var/lib/jenkins/jobs/ -name config.xml}
+                echo \$file
                 """
             }
         }
