@@ -22,7 +22,6 @@ pipeline {
                 do
                 config=\$(echo \$x | cut -c \$leng-)
                 cp -rf --parents $JENKINS_HOME/jobs\$config  $WORKSPACE/backups/
-                #cp -rf --parents $JENKINS_HOME/jobs\$config  $JENKINS_HOME/workspace/qwerty
                 done
                 cd $WORKSPACE/backups/
                 git add .
