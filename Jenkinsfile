@@ -4,6 +4,7 @@ pipeline {
         stage ('clone') {
             steps {
                 git credentialsId: '12fde15b-88f7-44c3-a289-7aa18d573518', url: 'https://github.com/konef/backups'
+                sh 'git clone git@github.com:konef/backups.git'
             }
         }
     }
