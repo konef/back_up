@@ -24,6 +24,10 @@ pipeline {
                 cp -rf --parents $JENKINS_HOME/jobs\$config  $WORKSPACE/backups/
                 #cp -rf --parents $JENKINS_HOME/jobs\$config  $JENKINS_HOME/workspace/qwerty
                 done
+                cd $WORKSPACE/backups/
+                git add .
+                git commit -m "Build $BUILD_NUMBER"
+                git push -u origin master
                 """
             }
         }
