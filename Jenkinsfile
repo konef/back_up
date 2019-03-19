@@ -6,6 +6,13 @@ pipeline {
                 cleanWs()
             }
         }
+        stage ('var') {
+            steps {
+                sh """
+                echo "WORKSPACE" :: $WORKSPACE
+                """
+            }
+        }
         stage ('clone') {
             steps {
                 sh """
